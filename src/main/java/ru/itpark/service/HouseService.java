@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 
 public class HouseService {
     private List<House> houses;
-    private Stream<House> stream;
 
     public HouseService() {
         houses = new ArrayList<>();
@@ -23,16 +22,14 @@ public class HouseService {
     }
 
     public void searchByPrice(int min, int max) {
-        stream = houses.stream();
-        stream.filter(x -> x.getPrice() >= min)
+        houses.stream().filter(x -> x.getPrice() >= min)
                 .filter(x -> x.getPrice() < max)
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
     }
 
     public void searchByArea(Area area) {
-        stream = houses.stream();
-        stream.filter(x -> x.getArea().equals(area))
+        houses.stream().filter(x -> x.getArea().equals(area))
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
     }
@@ -49,8 +46,6 @@ public class HouseService {
     }
 
     public void showAll() {
-        for (House house : houses) {
-            System.out.println(house);
-        }
+        houses.forEach(System.out::println);
     }
 }
