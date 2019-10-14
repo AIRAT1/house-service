@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) {
         HouseService houseService = new HouseService();
         houseService.initRandom();
-        houseService.addHouse(new House(10, 500_000, Area.Brooklyn));
+        houseService.addHouse(new House(10, 500_000, Area.BROOKLYN));
 
 //        houseService.showAll();
 //        houseService.searchByPrice(100_000, 500_000);
-        houseService.searchByArea(Area.Brooklyn);
+        houseService.searchByArea(Area.BROOKLYN);
     }
 
 }
