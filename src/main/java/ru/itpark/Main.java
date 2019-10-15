@@ -4,6 +4,9 @@ import ru.itpark.model.Area;
 import ru.itpark.model.House;
 import ru.itpark.service.HouseService;
 
+import java.util.List;
+import java.util.Observable;
+
 public class Main {
     public static void main(String[] args) {
         HouseService houseService = new HouseService();
@@ -12,7 +15,11 @@ public class Main {
 
 //        houseService.showAll();
 //        houseService.searchByPrice(100_000, 500_000);
-        houseService.searchByArea(Area.BROOKLYN);
+        printSearchByArea(houseService);
+    }
+
+    private static void printSearchByArea(HouseService houseService) {
+        houseService.searchByArea(Area.BROOKLYN).forEach(System.out::println);
     }
 
 }

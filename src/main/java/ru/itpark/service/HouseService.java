@@ -23,10 +23,10 @@ public class HouseService {
                 .forEach(System.out::println);
     }
 
-    public void searchByArea(Area area) {
-        houses.stream().filter(x -> x.getArea().equals(area))
-                .collect(Collectors.toList())
-                .forEach(System.out::println);
+    public List<House> searchByArea(Area area) {
+        return houses.stream().filter(x -> x.getArea()
+                .equals(area))
+                .collect(Collectors.toList());
     }
 
     public void initRandom() {
