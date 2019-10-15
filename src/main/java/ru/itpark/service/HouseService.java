@@ -18,7 +18,7 @@ public class HouseService {
 
     public void searchByPrice(int min, int max) {
         houses.stream().filter(x -> x.getPrice() >= min)
-                .filter(x -> x.getPrice() < max)
+                .filter(x -> x.getPrice() <= max)
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
     }
