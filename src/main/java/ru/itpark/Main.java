@@ -11,8 +11,12 @@ public class Main {
         houseService.addHouse(new House(10, 500_000, Area.BROOKLYN));
 
 //        printAll(houseService);
-        houseService.searchByPrice(100_000, 500_000);
+        printSearchByPrice(houseService);
 //        printSearchByArea(houseService);
+    }
+
+    private static void printSearchByPrice(HouseService houseService) {
+        houseService.searchByPrice(100_000, 500_000).forEach(System.out::println);
     }
 
     private static void printAll(HouseService houseService) {

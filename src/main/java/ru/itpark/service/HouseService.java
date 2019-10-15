@@ -16,11 +16,10 @@ public class HouseService {
         houses.add(house);
     }
 
-    public void searchByPrice(int min, int max) {
-        houses.stream().filter(x -> x.getPrice() >= min)
+    public List<House> searchByPrice(int min, int max) {
+        return houses.stream().filter(x -> x.getPrice() >= min)
                 .filter(x -> x.getPrice() <= max)
-                .collect(Collectors.toList())
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
     }
 
     public List<House> searchByArea(Area area) {
