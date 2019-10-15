@@ -29,7 +29,7 @@ public class HouseService {
                 .collect(Collectors.toList());
     }
 
-    public void initRandom() {
+    public void fillWithRandomData() {
         Random random = new Random();
         for (int i = 0; i < 10; i++) {
             int price = random.nextInt((Constants.MAX_PRICE - Constants.MIN_PRICE) + 1) + Constants.MIN_PRICE;
