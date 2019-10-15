@@ -38,7 +38,7 @@ public class HouseService {
         }
     }
 
-    public void showAll() {
-        houses.forEach(System.out::println);
+    public List<House> getAll() {
+        return houses;
     }
 }
