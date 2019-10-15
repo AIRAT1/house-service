@@ -10,9 +10,9 @@ public class Main {
         houseService.fillWithRandomData();
         houseService.addHouse(new House(10, 500_000, Area.BROOKLYN));
 
-//        printAll(houseService);
+        printAll(houseService);
         printSearchByPrice(houseService);
-//        printSearchByArea(houseService);
+        printSearchByArea(houseService);
     }
 
     private static void printSearchByPrice(HouseService houseService) {
