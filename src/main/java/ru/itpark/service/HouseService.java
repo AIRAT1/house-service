@@ -10,11 +10,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 public class HouseService {
-    private List<House> houses;
-
-    public HouseService() {
-        houses = new ArrayList<>();
-    }
+    private List<House> houses = new ArrayList<>();
 
     public void addHouse(House house) {
         houses.add(house);
