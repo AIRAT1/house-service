@@ -31,11 +31,9 @@ public class HouseService {
 
     public void initRandom() {
         Random random = new Random();
-        Area area;
-        int price;
         for (int i = 0; i < 10; i++) {
-            price = random.nextInt((Constants.MAX_PRICE - Constants.MIN_PRICE) + 1) + Constants.MIN_PRICE;
-            area = Area.values()[random.nextInt(Area.values().length)];
+            int price = random.nextInt((Constants.MAX_PRICE - Constants.MIN_PRICE) + 1) + Constants.MIN_PRICE;
+            Area area = Area.values()[random.nextInt(Area.values().length)];
             houses.add(new House(i, price, area));
         }
     }

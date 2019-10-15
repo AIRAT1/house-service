@@ -13,9 +13,9 @@ public class Main {
         houseService.initRandom();
         houseService.addHouse(new House(10, 500_000, Area.BROOKLYN));
 
-//        houseService.showAll();
+        houseService.showAll();
 //        houseService.searchByPrice(100_000, 500_000);
-        printSearchByArea(houseService);
+//        printSearchByArea(houseService);
     }
 
     private static void printSearchByArea(HouseService houseService) {
